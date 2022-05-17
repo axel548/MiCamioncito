@@ -31,10 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href=" {{ redirect()->route('home') }} ">Home</a>
+                        <a class="nav-link active" aria-current="page" href=" {{ route('home') }} ">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ redirect()->route('vehiculos') }}">Vehículos</a>
+                        <a class="nav-link" href="{{ route('vehiculos') }}">Vehículos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Clientes</a>
@@ -44,7 +44,7 @@
                     </li>
 
 
-                    <li class="nav-item dropdown">
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Link
@@ -60,12 +60,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled">Link</a>
-                    </li>
+                    </li> --}}
                 </ul>
-                <form class="d-flex" role="search">
+                {{-- <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                </form> --}}
             </div>
         </div>
     </nav>
