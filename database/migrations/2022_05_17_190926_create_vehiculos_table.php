@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vehiculos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->integer('capacidad_m_cuadrados');
+            $table->integer('consumo_combustible_km');
+            $table->text('tipo_carga');
+            $table->integer('precio_inicial');
             $table->timestamps();
         });
     }

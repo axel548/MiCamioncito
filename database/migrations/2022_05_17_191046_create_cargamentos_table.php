@@ -14,8 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cargamentos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->integer('porcentaje_cargo');
+            $table->text('direccion_recepcion');
+            $table->text('direccion_entrega');
+            $table->text('documentacion')->nullable();
+            $table->bigInteger('id_cliente');
             $table->timestamps();
+
+            $table->foreign('id_cliente')->references('id')->on('clientes');
         });
     }
 

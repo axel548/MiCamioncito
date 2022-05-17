@@ -14,8 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('depreciaciones', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->integer('depreciacion_vehiculo');
+            $table->integer('km_recorrido');
+            $table->bigInteger('id_vehiculo');
             $table->timestamps();
+
+            $table->foreign('id_vehiculo')->references('id')->on('vehiculos');
         });
     }
 

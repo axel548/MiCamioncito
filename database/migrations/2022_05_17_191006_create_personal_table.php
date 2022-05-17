@@ -14,8 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('personal', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('nombre', 50);
+            $table->integer('dpi');
+            $table->dateTime('horario_disponible_inicio');
+            $table->dateTime('horario_disponible_fin');
+            $table->bigInteger('id_tipo');
             $table->timestamps();
+
+            $table->foreign('id_tipo')->references('id')->on('tipopersonal');
         });
     }
 
