@@ -17,7 +17,7 @@ class VehiculosController extends Controller
     public function index()
     {
         $vehiculos = Vehiculos::get();
-        return view('vehiculos', compact('vehiculos'));
+        return view('vehiculos.index', compact('vehiculos'));
     }
 
     /**

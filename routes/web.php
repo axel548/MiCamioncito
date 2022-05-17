@@ -38,3 +38,13 @@ Route::prefix('/personal')->group(function () {
 
     Route::post('/crear', [PersonalController::class, 'store'])->name('personal.crear');
 });
+
+
+// Rutas de Clientes
+Route::prefix('/clientes')->group(function () {
+    Route::get('', [PersonalController::class, 'index'])->name('clientes');
+
+    Route::get('/nuevo', [PersonalController::class, 'create'])->name('clientes.nuevo');
+
+    Route::post('/crear', [PersonalController::class, 'store'])->name('clientes.crear');
+});

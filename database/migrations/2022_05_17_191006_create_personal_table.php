@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('nombre', 50);
             $table->integer('dpi');
+            $table->integer('tel');
             $table->dateTime('horario_disponible_inicio');
             $table->dateTime('horario_disponible_fin');
             $table->bigInteger('id_tipo');

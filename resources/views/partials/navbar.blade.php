@@ -17,6 +17,7 @@
 
     </style>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css" />
+    {{-- <script src="{{ asset('js/jquery-3.6.0.min') }}" type="text/javascript"></script> --}}
 </head>
 
 <body>
@@ -37,10 +38,10 @@
                         <a class="nav-link" href="{{ route('vehiculos') }}">Vehículos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Clientes</a>
+                        <a class="nav-link" href="{{ route('clientes') }}">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Personal</a>
+                        <a class="nav-link" href="{{ route('personal') }}">Personal</a>
                     </li>
 
 
@@ -69,3 +70,4 @@
             </div>
         </div>
     </nav>
+

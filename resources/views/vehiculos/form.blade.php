@@ -6,7 +6,7 @@
         <div class="card w-100">
             <div class="card-body">
                 <h5 class="card-title">Crear Vehículo</h5>
-                <form action=" {{ route('vehiculos.crear') }} " method="post">
+                <form action=" {{ route('vehiculos.crear') }} " method="post" autocomplete="off">
                     @csrf
                     <div class="row">
                         <div class="col">
